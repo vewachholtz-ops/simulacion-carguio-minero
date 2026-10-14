@@ -1,0 +1,18 @@
+{
+  "camiones_menor_costo": 12,
+  "costo_minimo_usd_t": 1.1446012972148034,
+  "produccion_en_menor_costo_t_h": 5242.0,
+  "produccion_maxima_t_h": 6081.333333333333,
+  "camiones_para_95pct_del_maximo": 14,
+  "comparacion": {
+    "flotas": [
+      12,
+      14
+    ],
+    "dif_produccion_t_h": 576.6666666666666,
+    "ic95_dif_produccion": 35.8471679626882,
+    "dif_costo_usd_t": 0.008291577579195637,
+    "ic95_dif_costo": 0.005292583465845378,
+    "correlacion_produccion": 0.9939618918250548
+  }
+}

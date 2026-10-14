@@ -1,0 +1,34 @@
+[project]
+name = "carguio"
+version = "1.0.0"
+description = "Simulación de eventos discretos de carguío y transporte en una mina a rajo abierto (palas, camiones y chancador), con una app web que la anima."
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Vicente Wachholtz Reyes" }]
+requires-python = ">=3.12"
+dependencies = [
+    "simpy>=4.1",
+    "numpy>=2.0",
+    "scipy>=1.13",
+    "pandas>=2.2",
+    "matplotlib>=3.9",
+]
+
+[project.scripts]
+carguio = "carguio.__main__:main"
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.6", "playwright>=1.50"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 110
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "RUF"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

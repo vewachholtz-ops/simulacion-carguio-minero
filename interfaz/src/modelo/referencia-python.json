@@ -1,0 +1,156 @@
+{
+  "replicas": 300,
+  "semilla_base": 1000,
+  "flotas": {
+    "4": {
+      "produccion_t_h": {
+        "media": 1984.2,
+        "desviacion": 58.79242
+      },
+      "utilizacion_palas": {
+        "media": 0.28922,
+        "desviacion": 0.00861
+      },
+      "utilizacion_chancador": {
+        "media": 0.19053,
+        "desviacion": 0.00581
+      },
+      "disponibilidad_palas": {
+        "media": 0.91008,
+        "desviacion": 0.0615
+      },
+      "espera_pala_min": {
+        "media": 0.43076,
+        "desviacion": 0.77471
+      },
+      "espera_chancador_min": {
+        "media": 0.07306,
+        "desviacion": 0.03033
+      },
+      "ciclo_medio_min": {
+        "media": 26.61631,
+        "desviacion": 0.79542
+      }
+    },
+    "8": {
+      "produccion_t_h": {
+        "media": 3825.26667,
+        "desviacion": 135.54891
+      },
+      "utilizacion_palas": {
+        "media": 0.56341,
+        "desviacion": 0.01976
+      },
+      "utilizacion_chancador": {
+        "media": 0.36706,
+        "desviacion": 0.01331
+      },
+      "disponibilidad_palas": {
+        "media": 0.91018,
+        "desviacion": 0.06145
+      },
+      "espera_pala_min": {
+        "media": 1.24174,
+        "desviacion": 1.00467
+      },
+      "espera_chancador_min": {
+        "media": 0.1582,
+        "desviacion": 0.02927
+      },
+      "ciclo_medio_min": {
+        "media": 27.4791,
+        "desviacion": 0.99314
+      }
+    },
+    "12": {
+      "produccion_t_h": {
+        "media": 5351.86667,
+        "desviacion": 301.78596
+      },
+      "utilizacion_palas": {
+        "media": 0.78358,
+        "desviacion": 0.04333
+      },
+      "utilizacion_chancador": {
+        "media": 0.51337,
+        "desviacion": 0.02907
+      },
+      "disponibilidad_palas": {
+        "media": 0.91032,
+        "desviacion": 0.06137
+      },
+      "espera_pala_min": {
+        "media": 3.26489,
+        "desviacion": 1.74872
+      },
+      "espera_chancador_min": {
+        "media": 0.26111,
+        "desviacion": 0.03387
+      },
+      "ciclo_medio_min": {
+        "media": 29.61201,
+        "desviacion": 1.73794
+      }
+    },
+    "16": {
+      "produccion_t_h": {
+        "media": 6204.86667,
+        "desviacion": 424.83007
+      },
+      "utilizacion_palas": {
+        "media": 0.90831,
+        "desviacion": 0.06176
+      },
+      "utilizacion_chancador": {
+        "media": 0.5953,
+        "desviacion": 0.04097
+      },
+      "disponibilidad_palas": {
+        "media": 0.91033,
+        "desviacion": 0.06141
+      },
+      "espera_pala_min": {
+        "media": 7.64754,
+        "desviacion": 2.49332
+      },
+      "espera_chancador_min": {
+        "media": 0.34802,
+        "desviacion": 0.04009
+      },
+      "ciclo_medio_min": {
+        "media": 34.06181,
+        "desviacion": 2.50241
+      }
+    },
+    "20": {
+      "produccion_t_h": {
+        "media": 6216.13333,
+        "desviacion": 423.36253
+      },
+      "utilizacion_palas": {
+        "media": 0.91028,
+        "desviacion": 0.0614
+      },
+      "utilizacion_chancador": {
+        "media": 0.59639,
+        "desviacion": 0.04085
+      },
+      "disponibilidad_palas": {
+        "media": 0.91029,
+        "desviacion": 0.06139
+      },
+      "espera_pala_min": {
+        "media": 16.02429,
+        "desviacion": 3.07428
+      },
+      "espera_chancador_min": {
+        "media": 0.35102,
+        "desviacion": 0.04173
+      },
+      "ciclo_medio_min": {
+        "media": 42.42964,
+        "desviacion": 3.08446
+      }
+    }
+  }
+}

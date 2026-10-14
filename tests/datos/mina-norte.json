@@ -1,0 +1,21 @@
+{
+  "formato": "rajo-escenario/1",
+  "nombre": "Mina Norte (inventada)",
+  "parametros": {
+    "n_camiones": 18,
+    "n_palas": 3,
+    "capacidad_t": 240,
+    "carga_min": [2, 2.5, 3.2],
+    "descarga_min": [0.8, 1, 1.4],
+    "acarreo_min": [9, 1.08],
+    "retorno_min": [6.3, 0.76],
+    "posicionamiento_min": 0.6,
+    "mtbf_pala_min": 600,
+    "mttr_pala_min": 40,
+    "turno_min": 720,
+    "calentamiento_min": 60
+  },
+  "costos": { "camion_usd_h": 380, "pala_usd_h": 1100 },
+  "meta_t_turno": 60000,
+  "ruta": { "distancia_km": 4.2, "velocidad_cargado_km_h": 28, "velocidad_vacio_km_h": 40, "variacion": 0.12 }
+}

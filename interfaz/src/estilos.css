@@ -1,0 +1,164 @@
+/* Tolva: gris roca con turquesa de crisocola (el mineral oxidado del cobre) para lo que se toca y lo que es dato, y
+   cobre para el mineral que va en los camiones. Archivo, ancha en los títulos como los letreros de una faena. */
+
+@import "tailwindcss";
+@import "@fontsource-variable/archivo/wdth.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-sans: "Archivo Variable", "Segoe UI", system-ui, sans-serif;
+
+  --color-fondo: var(--fondo);
+  --color-superficie: var(--superficie);
+  --color-hundida: var(--hundida);
+  --color-tinta: var(--tinta);
+  --color-tinta-suave: var(--tinta-suave);
+  --color-tinta-tenue: var(--tinta-tenue);
+  --color-linea: var(--linea);
+  --color-acento: var(--acento);
+  --color-acento-hondo: var(--acento-hondo);
+  --color-acento-tinte: var(--acento-tinte);
+  --color-sobre-acento: var(--sobre-acento);
+  --color-cobre: var(--cobre);
+  --color-cobre-tinte: var(--cobre-tinte);
+  --color-falla: var(--falla);
+  --color-falla-tinte: var(--falla-tinte);
+  --color-dato: var(--dato);
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 9px;
+}
+
+:root {
+  --fondo: #eceeef;
+  --superficie: #fafbfb;
+  --hundida: #e1e4e6;
+  --tinta: #16191c;
+  --tinta-suave: #474e55;
+  --tinta-tenue: #656d74;
+  --linea: #d3d8db;
+  --acento: #0a6f78;
+  --acento-hondo: #07565d;
+  --acento-tinte: #d9eeef;
+  --sobre-acento: #ffffff;
+  --cobre: #b8561b;
+  --cobre-tinte: #f6e4d8;
+  --falla: #b3261e;
+  --falla-tinte: #f9e1df;
+  /* gráficos (validados juntos para daltonismo) */
+  --dato: #008c9c;
+  --dato-2: #bb5a1e;
+  --contexto: #bcc3c8;
+  --grilla: #e0e4e6;
+  --eje: #c3c9cd;
+  /* el rajo: del borde (claro) al fondo (oscuro) */
+  --banco-0: #e4e6e5;
+  --banco-1: #d8dbda;
+  --banco-2: #cbcfcf;
+  --banco-3: #bec3c4;
+  --banco-4: #b0b6b8;
+  --banco-5: #a2a9ac;
+  --banco-6: #959ca0;
+  --cresta: #8a9296;
+  --camino: #f4efe6;
+  --terreno: #e7e5df;
+  color-scheme: light;
+}
+
+.dark {
+  --fondo: #101315;
+  --superficie: #171b1e;
+  --hundida: #20252a;
+  --tinta: #e6eaed;
+  --tinta-suave: #b4bcc2;
+  --tinta-tenue: #8d969d;
+  --linea: #2b3237;
+  --acento: #4cc2c4;
+  --acento-hondo: #86d9da;
+  --acento-tinte: #173436;
+  --sobre-acento: #071c1e;
+  --cobre: #e08a50;
+  --cobre-tinte: #3a2619;
+  --falla: #f2776d;
+  --falla-tinte: #3b1f1d;
+  --dato: #1aa0aa;
+  --dato-2: #d9773b;
+  --contexto: #3f474d;
+  --grilla: #252b30;
+  --eje: #3a4248;
+  --banco-0: #262b2f;
+  --banco-1: #2b3135;
+  --banco-2: #31373b;
+  --banco-3: #373e43;
+  --banco-4: #3e454a;
+  --banco-5: #454d52;
+  --banco-6: #4d555b;
+  --cresta: #5d666c;
+  --camino: #5b5247;
+  --terreno: #1c2023;
+  color-scheme: dark;
+}
+
+@layer base {
+  * {
+    border-color: var(--linea);
+  }
+  body {
+    background: var(--fondo);
+    color: var(--tinta);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  :focus-visible {
+    outline: 2px solid var(--acento);
+    outline-offset: 2px;
+  }
+  ::selection {
+    background: var(--acento-tinte);
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+}
+
+/* Archivo ancha para títulos y letreros; angosta para cifras que tienen que caber */
+.ancha {
+  font-stretch: 125%;
+}
+.angosta {
+  font-stretch: 87.5%;
+}
+.cifras {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Observable Plot */
+.grafico svg {
+  overflow: visible;
+  color: var(--tinta-tenue);
+  background: transparent;
+}
+.grafico [aria-label="tip"] {
+  color: var(--tinta);
+}
+
+/* el control deslizante del turno y de la flota */
+input[type="range"] {
+  accent-color: var(--acento);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
