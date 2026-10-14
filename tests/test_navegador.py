@@ -77,8 +77,11 @@ def test_el_turno_avanza_y_los_controles_cambian_la_flota(pagina, url):
     assert pagina.get_by_role("link", name="Turno", exact=True).get_attribute("aria-current") == "page"
     pagina.locator("#simular canvas").wait_for(timeout=30_000)
     inicio = _hora(pagina)
-    pagina.wait_for_timeout(1500)
-    assert _hora(pagina) != inicio, "el reloj del turno no avanzó"
+    # El primer render 3D por software puede tardar en CI. Esperar el cambio real del reloj,
+    # manteniendo un límite: una animación detenida debe seguir haciendo fallar la prueba.
+    playwright.expect(pagina.locator("aside[aria-label=Despacho] p.ancha")).not_to_have_text(
+        inicio, timeout=10_000
+    )
     pagina.get_by_role("button", name="Pausar").click()
     pagina.get_by_label("Minuto del turno").fill("300")
     assert _hora(pagina) == "13:00"

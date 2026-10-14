@@ -3,3 +3,7 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 *.egg-info/
+
+# Apuntes de trabajo y material retirado: se conservan localmente.
+/AUDITORIA.md
+/PUBLICACION.md
